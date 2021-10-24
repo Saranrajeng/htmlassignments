@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            #bg{
+                background-image: url(https://thumbs.dreamstime.com/z/group-college-students-28690355.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            #p{
+                color: aliceblue;
+            }
+            
+            h1{
+                text-align: center;
+                font-size: 50px;
+            }
+            .contain{
+                padding: 16px;
+            }
+            input[type="text"],input[type="password"]{
+                width: 100%;
+                 padding: 15px;
+                 margin: 5px 0 22px 0;
+                 display: inline-block;
+                 border: none;
+              background: #f1f1f1;
+                
+            }
+
+            hr{
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+                opacity: 70;
+
+            }
+            .regibut{
+
+                background-color: #04AA6D;
+                 color: white;
+                  padding: 16px 20px;
+                  margin: 0px 30% 0px 30%;
+                 border: none;
+                 cursor: pointer;
+                 width: 20%;
+                  opacity: 0.9;
+                  text-align: center;
+            }
+            regibut:hover{
+                color: blue;
+            }
+
+            a{
+                color: dodgerblue;
+            }
+            .signin{
+                background-color: #f1f1f1;
+                 text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form>
+            <div id="bg">
+            <div>
+                <h1>Student Register</h1>
+                <p style="text-align: center;" id="p">Please  fiil in this form to create your account.</p>
+                
+
+            </div>
+            <div class="contain">
+                <hr>
+               
+               <label for="1"><b>Name</b></label>
+               <input type="text" placeholder="enter your name" name="name" required id="1"></br>
+
+                <label for="2" style="width: 50%;"><b>Mobile Number</b></label>
+                <input type="text" pattern="[0-9]" placeholder="Enter your mobile number" id="2" required maxlength="10"></br>
+
+                <label for="3"><b>Age</b></label>
+                <input type="number" id="3"></br>
+
+                <label for="4"> <b>Email</b></label>
+                <input type="text" placeholder="Enter your Email" id="4" name="email" required></br>
+
+                <label for="5"><b>User ID</b></label>
+                <input type="text" placeholder="Enter your user ID" id="5" required></br>
+
+                <label for="6"><B>Password</B></label>
+                <input type="password" placeholder="Enter your Password" name="password" id="6" required></br>
+
+                <label for="7"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Retype your Passord" name="passwordre" id="7" required></br>
+
+            </hr>
+            <p id="p"> By creating Your Account  you aggree to our <a href="$" >Terms & Privacy</a>.</p>
+            <button type="submit" class="regibut">Register</button>
+            </div>
+            <div class="signin">
+                <p>Already have an account<a href="#">Signin</a>.</p>
+            </div>
+            </div>
+
+        </form>
+    </body>
+</html>
