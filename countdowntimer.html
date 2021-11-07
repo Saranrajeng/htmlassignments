@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+            const timeh = document.querySelector('h1');
+            let timesecond = 5;
+            timeh.innerhtml ='00:${timesecond}';
+            const countdown= setInterval(() => {
+                timesecond--;
+                timeh.innerhtml='00:${timesecond}';
+                if(timesecond<=0||timesecond<1){
+                    clearInterval(countdown)
+                }
+                
+            },1000);
+        </script>
+
+    </head>
+    <body>
+        <h1>00:00</h1>
+    </body>
+</html>
