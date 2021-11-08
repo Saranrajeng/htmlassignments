@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <style>
+        .calc{
+            text-align: center;
+            width: 75vw;
+            height: 75vh;
+            margin:10% 10%;
+        }
+        button{
+            color: white;
+            
+            background-color: black;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Calculator</h1>
+   
+    <div class="calc">
+        <div class="displaybox">
+            <input id="disp" type="text" placeholder="0" disabled />
+        </div>
+
+        <div class="main">
+            
+                <button onclick="input(7)" class="number">7</button>
+                <button onclick="input(8)" class="number">8</button>
+                <button onclick="input(9)" class="number">9</button>
+                <button onclick="operate('+')" class="add">+</button><br/>
+            
+                <button onclick="input(4)" class="number">4</button>
+                <button onclick="input(5)" class="number">5</button>
+                <button onclick="input(6)" class="number">6</button>
+                <button onclick="operate('-')" class="minus">-</button><br>
+           
+           
+                <button onclick="input(1)" class="number">1</button>
+                <button onclick="input(2)" class="number">2</button>
+                <button onclick="input(3)" class="number">3</button>
+                <button onclick="operate('*')" class="multiply">*</button><br>
+         
+            
+                <button onclick="input(0)" class="number">0</button>
+                <button onclick="cancel(true)" class="number">Cancel</button>
+                <button onclick="equals()" class="equals">=</button>
+                <button onclick="operate('/')" class="divide">/</button>
+            
+        </div>
+    </div>
+    <script>
+        let result="";
+        let input1=0;
+        let input2=0;
+        let oper=" ";
+        let display = document.getElementById("disp");
+        function input(val){
+            if(oper == " "){
+                input1 = input1*10+val;
+            }
+            else
+            input2 = input2*10+val;
+        
+        
+        
+            if(oper == " "){
+                result = input1;
+            }
+            if(oper == "+"){
+                result = input1 + oper + input2;
+            }
+            if(oper == "-"){
+                result = input1 + oper + input2;
+            }
+            if(oper == "*"){
+                result = input1 + oper + input2;
+            }
+            if(oper == "/"){
+                result = input1 + oper + input2;
+            }
+            display.value=result;
+        }
+        
+        function operate(i) {
+            oper=i;
+            result = input1+oper;
+            display.value=result;
+        }
+        
+        function equals(){
+            if(oper=="+")
+                result = (input1+input2);
+        
+            if(oper=="-")
+                result = (input1-input2);
+            
+            if(oper=="*")
+                result =  (input1*input2);
+            
+            if(oper=="/")
+                result = (input1/input2);
+            display.value=result;
+            cancel(false);
+        }
+        function cancel(k){
+            result="";
+            input1=0;
+            input2=0;
+            oper=" ";
+            if(k)
+            display.value=result;
+        }</script>
+</body>
+</html>
