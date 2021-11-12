@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+          #contain{
+              margin: 10% 30%;
+              border-style: groove;
+              box-sizing: border-box;
+              height: 300px;
+              padding: 70px 50px;
+             
+                
+            }
+
+        </style>
+        <script>
+           
+            function gm(){
+                var h1ref = document.getElementById("h1");
+               h1ref.innerText="Good Morning!";
+               h1ref.style.color="blue";
+              var spref = document.getElementById("span1");
+              spref.style.color="red"
+            }
+            function ge(){
+                var h1ref = document.getElementById("h1");
+                h1ref.innerText="Good Evening!";
+                h1ref.style.color="green";
+                var spref = document.getElementById("span1");
+              spref.style.color="pink"
+                
+            }
+            function gn(){
+                var h1ref = document.getElementById("h1");
+                h1ref.innerText="Good Night!";
+                h1ref.style.color="yellow";
+                var spref = document.getElementById("span1");
+              spref.style.color="brown"
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="contain">
+          <div id="wis"><span id="h1"></span><span id="span1">Saran Raj</span></div>
+
+      
+            <button onclick="gm()">Good Morninig</button>
+            <button onclick="ge()">Good Evening</button>
+            <button onclick="gn()">Good Night</button>
+        
+    </div>
+    </body>
+</html>
