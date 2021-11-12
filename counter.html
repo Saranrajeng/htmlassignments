@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 20%;
+                height: 80%;
+                border-style: groove;
+                box-shadow: 5px 5px 5px 5px brown;
+                margin-left: 10%;
+                padding: 10% 30%;
+            }
+
+        </style>
+        <script>
+            let result=0;
+            
+            
+          function add(){
+            var display = document.getElementById("disp");
+                result=result+1;
+                display.value=result;
+            }
+            function minus(){
+                var display = document.getElementById("disp");
+                
+                result=result-1;
+                if(result<0){
+                display.value = 0;}
+                else{
+                    display.value=result;
+                }
+            }
+            function reset(){
+                var display = document.getElementById("disp");
+              
+                display.value= 0;
+                result=0;
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="container">
+        <div id="count">
+            <h1><b>Counter</b></h1>
+            <input id="disp" type="text" placeholder="0" disabled>
+            <button id="plus" onclick="add()">+</button>
+            <button id="minus" onclick="minus()">-</button>
+            <button id="reset"  onclick="reset()">RESET</button>
+
+        </div>
+
+        </div>
+    </body>
+</html>
