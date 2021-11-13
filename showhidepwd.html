@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            div{
+                margin-left: 20%;
+                margin-top: 20%;
+                box-shadow: 0 0 10px blue;
+                
+                
+                width: 60%;
+                height: 30vh;
+                padding: 20px 20px 20px 20px;
+            }
+
+        </style>
+        <script>
+                var btnref= document.getElementById("btn");
+                var inputref= document.getElementById("pwd");
+            
+                
+                
+            function show(){
+                
+                var btnref= document.getElementById("btn");
+                var inputref= document.getElementById("pwd");
+              
+               inputref.type="text";
+               
+               btnref.innerText="hide password";
+            }
+            function hide(){
+                var btnref= document.getElementById("btn");
+                var inputref= document.getElementById("pwd");
+              
+               inputref.type="password";
+              
+               btnref.innerText="show password";
+            }
+            function pwd(){
+                 var inputref= document.getElementById("pwd");
+                if(inputref.type =="password"){
+                    show();
+                }
+                else{
+                    hide();
+                }
+                }
+            
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>show/hide password</h1>
+            <label>Enter password</label>
+        <input type="password" id="pwd">
+        <button onclick="pwd()" id="btn">show password</button>
+    </div>
+    </body>
+</html>
