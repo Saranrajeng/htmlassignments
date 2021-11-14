@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <style>
+            body{
+                background-color: #dbc7c7c0;
+                text-align: center;
+                
+            }
+            i{  color: rgb(255, 208, 0);}
+            .a{
+                margin-left: 25%;
+                padding-top: 15px;
+                height: 10%;
+                text-align: center;
+                width: 50%;
+                background-color: white;
+                margin-bottom: 20px;
+                padding-left: 0%;
+                border-radius: 10px;
+                box-shadow: 0 0 5px black;
+            }
+            #but:hover{
+                color: #000;
+                
+            }
+            #but{
+                
+            }
+            button{
+                border: none;
+                background-color: white;
+                color: rgb(255, 208, 0);
+            }
+
+        </style>
+        <script>
+            function fun1(){
+                var inp = document.getElementById("div1");
+                inp.innerText="Yes";
+
+            }
+           function fun2(){
+                var inp2 = document.getElementById("div2");
+                inp2.innerText="Yes";
+            }
+            function fun3(){
+                var inp3 = document.getElementById("div3");
+                inp3.innerText="Yes";
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1><i>Genral Questions
+
+            </i>
+
+            </h1>
+        </div>
+        <div  class="a">
+            Do you Accept All Major Credit Cards?<button onclick="fun1()" id="but" class="material-icons">
+                add_box
+            </button><br>
+            <p id="div1"></p>
+        </div>
+        <div class="a">
+            Do You Support Local Farmers?<button onclick="fun2()" id="but" class="material-icons">
+                add_box
+            </button><br>
+            <p id="div2"></p>
+        </div>
+        <div class="a">Do You use Organic Ingredients?<button onclick="fun3()" id="but" class="material-icons">
+            add_box
+        </button>
+        <br>
+        <p id="div3"></p>
+    </div>
+    </body>
+
+</html>
