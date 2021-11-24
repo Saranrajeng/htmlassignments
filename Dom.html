@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <style>
+        div{
+            margin: 100px auto;
+            padding: 30px;
+            width: 500px;
+            box-shadow: 0 0 10px black;
+            text-align: center;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter the text <input id="i1">
+        <button onclick="fun()">update</button><br/>
+    </div>
+    <script>
+         
+        function fun(){
+            var input1 = document.getElementById("i1").value;
+            var span1 = document.createElement("span");
+       
+        var EditBtn = document.createElement("button");
+        var deleteBtn = document.createElement("button");
+        
+        if(input1==="")
+        {alert("enter some text");}
+        else{
+
+        span1.append(input1);
+        document.querySelector("div").appendChild(span1);
+      
+        document.querySelector("div").appendChild(EditBtn);
+        document.querySelector("div").appendChild(deleteBtn);
+
+        EditBtn.innerText="Edit";
+        deleteBtn.innerHTML="Delete";
+
+        var br = document.createElement("br");
+        document.querySelector("div").appendChild(br);
+
+        span1.style.marginRight="10px";
+        span1.style.marginTop="10px";
+        EditBtn.style.marginTop="10px";
+        deleteBtn.style.marginTop="10px";
+        EditBtn.style.marginRight="10px";
+
+        function deletecon(){
+            span1.remove();
+        }
+
+        deleteBtn.addEventListener('click',function(){span1.remove();})
+        deleteBtn.addEventListener('click',function(){EditBtn.remove();})
+        deleteBtn.addEventListener('click',function(){deleteBtn.remove();})
+
+        EditBtn.addEventListener('click',function(){span1.contentEditable=true;})
+
+       
+
+    }
+       
+        }
+        
+     
+
+
+    </script>
+    </body>
+</html>
