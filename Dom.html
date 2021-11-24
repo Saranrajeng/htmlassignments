@@ -52,9 +52,9 @@
             span1.remove();
         }
 
-        deleteBtn.addEventListener('click',function(){span1.remove();})
-        deleteBtn.addEventListener('click',function(){EditBtn.remove();})
-        deleteBtn.addEventListener('click',function(){deleteBtn.remove();})
+        deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(span1);})
+        deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(deleteBtn);})
+        deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(EditBtn);})
 
         EditBtn.addEventListener('click',function(){span1.contentEditable=true;})
 
