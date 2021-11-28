@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            div{
+                margin: 100px auto;
+                padding: 30px;
+                width: 500px;
+                box-shadow: 0 0 10px black;
+                text-align: center;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+        
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>ToDo List</h1>
+        <div>
+            To create a ToDo tasks  click<br/>
+            <input id="i1">
+            <button onclick="create()">Create</button><br/>
+        </div>
+        <script>
+            function create(){
+                var span1 = document.createElement("span");
+       var inputval = document.getElementById("i1").value;
+       var EditBtn = document.createElement("button");
+       var deleteBtn = document.createElement("button");
+       var inputbox =document.createElement("input");
+       inputbox.type="checkbox";
+       var updatebtn= document.createElement("button");
+       var br = document.createElement("br");
+
+        document.querySelector("div").appendChild(inputbox);
+       document.querySelector("div").appendChild(span1);
+      
+      document.querySelector("div").appendChild(EditBtn);
+      document.querySelector("div").appendChild(deleteBtn);
+      document.querySelector("div").appendChild(updatebtn);
+      document.querySelector("div").appendChild(br);
+
+      EditBtn.innerText="Edit";
+        deleteBtn.innerHTML="Delete";
+        updatebtn.innerText="Update";
+        
+        span1.style.marginRight="10px";
+        span1.style.marginTop="10px";
+        EditBtn.style.marginTop="10px";
+        deleteBtn.style.marginTop="10px";
+        EditBtn.style.marginRight="10px";
+        updatebtn.style.marginRight="10px";
+        deleteBtn.style.marginRight="10px";
+
+        span1.append(inputval);
+
+ 
+        deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(span1);})
+        deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(deleteBtn);})
+       deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(EditBtn);})
+       deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(updatebtn);})
+       deleteBtn.addEventListener('click',function(){document.querySelector("div").removeChild(inputbox);})
+
+       EditBtn.addEventListener('click',function(){span1.contentEditable=true;})
+
+       updatebtn.addEventListener('click',function(){inputbox.value="checked";})
+
+
+            }
+        </script>
+    </body>
+</html>
