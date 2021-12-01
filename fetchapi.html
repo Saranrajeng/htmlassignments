@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>style</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container mt-5 text-center">
+            <button class="btn btn-warning" onclick="fetchfn()">Fetch</button>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img id="img" src="" width="100%" height="100%"/>
+                                </div>
+                                <div class="col-8">
+                                    <table class="table">
+                                        <tr><th>ID</th><th>Name</th><th>City</th></tr>
+                                        <tr><td id="ID">1</td><td id="Name"></td><td id="City"></td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+   async function fetchfn(){
+     var respon= await  fetch("https://randomuser.me/api/?results=1");
+     var data = await respon.json();
+     console.log(data.results[0])
+      document.getElementById("img").src=data.results[0].picture.medium
+     document.getElementById("Name").innerText =data.results[0].name.first;
+     document.getElementById("City").innerText=data.results[0].location.city;
+
+
+    }
+</script>
+
+    </body>
+</html>
