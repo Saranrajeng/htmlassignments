@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            img{
+                height: 80vh;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img id="image"/>
+
+        </div>
+        <script>
+              
+         fetch("https://meme-api.herokuapp.com/gimme")
+          .then(res => res.json())
+          .then(info=>{
+
+        console.log(info.url);
+         var img = document.getElementById("image")  
+         img.src= info.url;
+         img.style.display=" block";
+            
+          })
+
+        </script>
+
+    </body>
+</html>
