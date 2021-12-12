@@ -13,7 +13,9 @@
             }
             img{
                 display: none;
-                display: ;
+                width: auto;
+                height: 70vh;
+                margin: 100px auto;
             }
         </style>
     </head>
@@ -24,15 +26,18 @@
 
         </div>
         <script>
+        function fetchfn(){
+        fetch("https://meme-api.herokuapp.com/gimme")
+          .then(res => res.json())
+          .then(info=>{
 
-         async function fetchfn(){
-         var respon= await  fetch("https://meme-api.herokuapp.com/gimme");
-         var data = await respon.json();
-        console.log(data.url);
+        console.log(info.url);
          var img = document.getElementById("image")  
-         img.src= data.url;
+         img.src= info.url;
          img.style.display=" block";
-    }
+            
+          })
+        }
         
      </script>
     </body>
