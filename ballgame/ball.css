@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(2, 1, 94);
+}
+#ball{
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 10000000;
+}
+body{
+    background-image: url(https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/binary-code-and-lock-shape-on-pixellated-screen-johan-swanepoel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color: aqua;
+}
+p{
+    margin-top: 60px;
+    text-align: center;
+    color: aqua;
+    font-size: xx-large;
+}
+
