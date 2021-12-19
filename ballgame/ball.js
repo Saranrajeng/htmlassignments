@@ -12,7 +12,7 @@ var intervaltop;
  }
 function moveRight(){
     var left = parseInt( window.getComputedStyle(ball).getPropertyValue("left"));
-    if(left<parseInt(screen.width*0.741)){
+    if(left<parseInt(screen.width*0.74)){
     ball.style.left= left+2+"px";
     }
 
@@ -44,7 +44,7 @@ function moveup(){
 }
 function movedown(){
 var top= parseInt( window.getComputedStyle(ball).getPropertyValue("top"));
-if(top<parseInt(screen.height*0.5565)){
+if(top<427){
 ball.style.top= top+2+"px";
 }
 
